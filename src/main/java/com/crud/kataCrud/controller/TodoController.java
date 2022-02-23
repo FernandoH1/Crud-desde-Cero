@@ -30,8 +30,8 @@ public class TodoController {
         throw new RuntimeException("No existe el id para actualizar");
     }
 
-    @DeleteMapping(value = "api/delete/{id}")
-    public void delete(@RequestParam("id") Long id){
+    @DeleteMapping(value = "api/{id}/todo")
+    public void delete(@PathVariable("id") Long id){
         service.delete(id);
     }
 
